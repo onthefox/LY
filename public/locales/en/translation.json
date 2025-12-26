@@ -1,0 +1,77 @@
+{
+  "heroTitle": "LONG YING",
+  "heroSub": "LOGISTICS",
+  "tagline": "Exquisite Customs Solutions for China & Russia Trade",
+  "taglineSub": "PREMIUM SOLUTIONS",
+  "cta": "Start Consultation",
+  "ctaSub": "GET STARTED",
+  "servicesTitle": "Our Services",
+  "servicesSub": "LINEUP",
+  "aboutTitle": "THE LEGACY",
+  "aboutSub": "LONG YING",
+  "aboutDesc": "We are the modern bridge between East and West. Long Ying Logistics combines historical reliability with cutting-edge velocity.",
+  "tariffsTitle": "Tariffs & Plans",
+  "tariffsSub": "PRICING",
+  "contactTitle": "Contact Us",
+  "contactSub": "GET IN TOUCH",
+  "contactDesc": "Ready to optimize your supply chain? Reach out for a tailored logistics strategy.",
+  "footerRights": "© 2025 Long Ying Logistics. All Rights Reserved.",
+  "nav": {
+    "services": "SERVICES",
+    "insights": "INSIGHTS",
+    "about": "ABOUT",
+    "tariffs": "TARIFFS",
+    "contacts": "CONTACTS"
+  },
+  "quote": "Request Quote",
+  "categories": {
+    "All": "All",
+    "Heavy Logistics": "Heavy Logistics",
+    "Tech Cargo": "Tech Cargo",
+    "Fashion Line": "Fashion Line",
+    "Machinery": "Machinery",
+    "Legal": "Legal",
+    "Consolidation": "Consolidation",
+    "Hazardous": "Hazardous",
+    "Temperature": "Temperature",
+    "High Value": "High Value"
+  },
+  "services": {
+    "1": {
+        "name": "Auto Parts",
+        "description": "Comprehensive supply of spare parts and units. From Guangzhou factories to Moscow warehouses."
+    },
+    "2": {
+        "name": "Electronics",
+        "description": "Careful delivery of chips, boards, and finished electronics. Special packaging."
+    },
+    "3": {
+        "name": "Textiles",
+        "description": "Logistics for marketplaces. Fabrics, accessories, and finished clothing."
+    },
+    "4": {
+        "name": "Industrial",
+        "description": "Supply of machine tools, production lines, and heavy machinery."
+    },
+    "5": {
+        "name": "Certification",
+        "description": "Processing of all necessary documents and certificates of conformity."
+    },
+    "6": {
+        "name": "LCL Shipping",
+        "description": "Cargo consolidation at our own warehouses in Yiwu and Guangzhou."
+    },
+    "7": {
+        "name": "Chemical Logistics",
+        "description": "Certified transport of hazardous materials, liquids, and bulk chemicals. ISO tanks."
+    },
+    "8": {
+        "name": "Cold Chain",
+        "description": "Temperature-controlled solutions for perishables and pharmaceuticals. Continuous monitoring."
+    },
+    "9": {
+        "name": "Fine Art",
+        "description": "Museum-grade handling for antiques and fine art. Climate-controlled packaging and secure escort."
+    }
+  }
+}

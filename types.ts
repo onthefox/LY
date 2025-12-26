@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 
-export type Language = 'cn' | 'ru' | 'en';
+export type Language = 'zh' | 'ru' | 'en';
 
 export interface ServiceItem {
   id: string;

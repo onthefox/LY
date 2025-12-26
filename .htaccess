@@ -1,0 +1,132 @@
+# Long Ying Logistics - SEO-Safe URL Migration
+# 301 Redirects from legacy URLs to new canonical URLs
+# Apache .htaccess configuration
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Force non-www to www (or vice versa - adjust as needed)
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Legacy SILK ROUTE redirects
+RewriteRule ^/?$ / [R=301,L]
+RewriteRule ^services/?$ /services [R=301,L]
+RewriteRule ^about/?$ /about [R=301,L]
+RewriteRule ^insights/?$ /insights [R=301,L]
+RewriteRule ^tariffs/?$ /tariffs [R=301,L]
+RewriteRule ^contacts/?$ /contacts [R=301,L]
+
+# Legacy blog redirects (assuming old blog structure)
+RewriteRule ^blog/([^/]+)/?$ /insights [R=301,L]
+RewriteRule ^news/([^/]+)/?$ /insights [R=301,L]
+RewriteRule ^articles/([^/]+)/?$ /insights [R=301,L]
+
+# Legacy service redirects
+RewriteRule ^logistics/?$ /services [R=301,L]
+RewriteRule ^shipping/?$ /services [R=301,L]
+RewriteRule ^transport/?$ /services [R=301,L]
+
+# Legacy contact redirects
+RewriteRule ^contact/?$ /contacts [R=301,L]
+RewriteRule ^contact-us/?$ /contacts [R=301,L]
+
+# Legacy pricing redirects
+RewriteRule ^pricing/?$ /tariffs [R=301,L]
+RewriteRule ^rates/?$ /tariffs [R=301,L]
+
+# Language-specific redirects (if old site had different structure)
+RewriteRule ^zh/?$ /zh/ [R=301,L]
+RewriteRule ^ru/?$ /ru/ [R=301,L]
+RewriteRule ^en/?$ / [R=301,L]
+
+# Legacy Chinese pages
+RewriteRule ^zh/services/?$ /zh/services [R=301,L]
+RewriteRule ^zh/about/?$ /zh/about [R=301,L]
+RewriteRule ^zh/insights/?$ /zh/insights [R=301,L]
+RewriteRule ^zh/tariffs/?$ /zh/tariffs [R=301,L]
+RewriteRule ^zh/contacts/?$ /zh/contacts [R=301,L]
+
+# Legacy Russian pages
+RewriteRule ^ru/services/?$ /ru/services [R=301,L]
+RewriteRule ^ru/about/?$ /ru/about [R=301,L]
+RewriteRule ^ru/insights/?$ /ru/insights [R=301,L]
+RewriteRule ^ru/tariffs/?$ /ru/tariffs [R=301,L]
+RewriteRule ^ru/contacts/?$ /ru/contacts [R=301,L]
+
+# Handle query parameters (preserve important ones)
+RewriteCond %{QUERY_STRING} ^ref=(.*)$
+RewriteRule ^/?$ /?ref=%1 [R=301,L]
+
+# SPA fallback - serve index.html for all non-file requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# Security headers
+<IfModule mod_headers.c>
+    # HSTS
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+    # Prevent clickjacking
+    Header always set X-Frame-Options DENY
+
+    # XSS protection
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # MIME type sniffing protection
+    Header always set X-Content-Type-Options nosniff
+
+    # Referrer policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Cache control
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# Block common exploits
+<Files "*.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "wp-config.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Block access to sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>

@@ -1,0 +1,155 @@
+/* Long Ying Logistics - Brand Color System & Typography */
+
+:root {
+  /* Primary Colors */
+  --color-primary-dark: #0A1A2F;
+  --color-primary-graphite: #121F2C;
+
+  /* Accent Colors */
+  --color-accent-gold: #D4A55F;
+
+  /* Text Colors */
+  --color-text-light: #E6E6E6;
+  --color-text-dark: #1A1A1A;
+
+  /* Background Colors */
+  --color-bg-primary: #0a0b14;
+  --color-bg-secondary: #121420;
+  --color-bg-tertiary: #151725;
+
+  /* Legacy colors for transition */
+  --color-red: #E60012;
+  --color-yellow: #FFD700;
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Inter', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-light);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Typography */
+.font-heading {
+  font-family: 'Alibaba Sans', 'HarmonyOS Sans', 'Inter', serif;
+  font-weight: 600;
+}
+
+.font-tech {
+  font-family: 'Space Grotesk', 'Inter', monospace;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-accent-gold);
+  font-family: 'Alibaba Sans', 'HarmonyOS Sans', 'Inter', serif;
+}
+
+/* Links */
+a {
+  color: var(--color-accent-gold);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-text-light);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-primary-dark);
+  border: 2px solid var(--color-accent-gold);
+  color: var(--color-accent-gold);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-gold);
+  color: var(--color-primary-dark);
+}
+
+/* Navigation */
+.nav-link {
+  color: var(--color-text-light);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-accent-gold);
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid rgba(212, 165, 95, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--color-accent-gold);
+}
+
+/* Silk Road Pattern Background */
+.silk-road-pattern {
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(212, 165, 95, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(212, 165, 95, 0.1) 2px, transparent 2px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+}
+
+/* Gradient overlays */
+.gradient-overlay {
+  background: linear-gradient(135deg,
+    rgba(10, 26, 47, 0.9) 0%,
+    rgba(18, 31, 44, 0.8) 50%,
+    rgba(212, 165, 95, 0.1) 100%);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid var(--color-accent-gold);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-text-light: #FFFFFF;
+    --color-text-dark: #000000;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
