@@ -1,0 +1,78 @@
+# Long Ying Logistics - Robots.txt
+# https://longyinglogistics.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Allow access to essential assets
+Allow: /index.html
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+Allow: /*.webp
+
+# Block access to development and sensitive files
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /scripts/
+Disallow: /utils/
+Disallow: /components/
+Disallow: /data/
+Disallow: /services/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /*.log
+Disallow: /*.tmp
+Disallow: /*.bak
+Disallow: /*.old
+Disallow: /admin/
+Disallow: /staging/
+Disallow: /test/
+Disallow: /dev/
+Disallow: /private/
+Disallow: /internal/
+
+# Block access to API endpoints and configuration files
+Disallow: /api/
+Disallow: /*.json
+Disallow: /*.env
+Disallow: /*.config
+Disallow: /package.json
+Disallow: /vite.config.*
+Disallow: /tsconfig.json
+Disallow: /.htaccess
+Disallow: /.htpasswd
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://longyinglogistics.com/sitemap.xml

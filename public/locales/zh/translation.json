@@ -1,0 +1,77 @@
+{
+  "heroTitle": "龙盈物流",
+  "heroSub": "LONG YING",
+  "tagline": "为中俄贸易提供精湛的海关解决方案",
+  "taglineSub": "PREMIUM LOGISTICS SOLUTIONS",
+  "cta": "开始咨询",
+  "ctaSub": "START CONSULTATION",
+  "servicesTitle": "我们的服务",
+  "servicesSub": "OUR SERVICES",
+  "aboutTitle": "龙盈",
+  "aboutSub": "传承与未来",
+  "aboutDesc": "我们是连接东方与西方的现代桥梁。龙盈物流将历史的可靠性与现代的速度相结合，确保货物安全抵达。",
+  "tariffsTitle": "资费计划",
+  "tariffsSub": "TARIFFS & PLANS",
+  "contactTitle": "联系我们",
+  "contactSub": "CONTACT US",
+  "contactDesc": "准备好优化您的供应链了吗？请联系我们制定定制物流策略。",
+  "footerRights": "© 2025 龙盈物流 (Long Ying Logistics). 版权所有.",
+  "nav": {
+    "services": "服务",
+    "insights": "洞察",
+    "about": "关于",
+    "tariffs": "资费",
+    "contacts": "联系"
+  },
+  "quote": "请求报价",
+  "categories": {
+    "All": "全部",
+    "Heavy Logistics": "重型物流",
+    "Tech Cargo": "科技货物",
+    "Fashion Line": "时尚专线",
+    "Machinery": "机械",
+    "Legal": "法务",
+    "Consolidation": "集运",
+    "Hazardous": "危险品",
+    "Temperature": "温控运输",
+    "High Value": "高价值"
+  },
+  "services": {
+    "1": {
+        "name": "汽车零部件",
+        "description": "零部件和单元的全面供应。从广州工厂到莫斯科仓库。我们要处理超大货物和集装箱运输。"
+    },
+    "2": {
+        "name": "电子产品",
+        "description": "芯片、电路板和成品电子产品的精心交付。特殊包装，100% 货物价值保险。"
+    },
+    "3": {
+        "name": "纺织品",
+        "description": "市场物流。面料、配饰和成品服装。协助标签和认证。"
+    },
+    "4": {
+        "name": "工业设备",
+        "description": "机床、生产线和重型机械的供应。专业外贸咨询。"
+    },
+    "5": {
+        "name": "认证服务",
+        "description": "处理货物清关所需的所有必要文件和合格证书。"
+    },
+    "6": {
+        "name": "拼箱运输",
+        "description": "在义乌和广州的自有仓库进行货物集运。小企业的最佳解决方案。"
+    },
+    "7": {
+        "name": "化学品物流",
+        "description": "危险品、液体和散装化学品的合规运输。ISO 储罐和专业文件。"
+    },
+    "8": {
+        "name": "冷链物流",
+        "description": "为易腐食品和药品提供温控解决方案。全程温度监控。"
+    },
+    "9": {
+        "name": "艺术品运输",
+        "description": "博物馆级古董和艺术品处理。气候控制包装和武装押运。"
+    }
+  }
+}
