@@ -19,6 +19,7 @@ export default defineConfig({
  define: {
    global: 'globalThis',
  },
+ base: process.env.NODE_ENV === 'production' ? '/LY/' : '/',
  server: {
    proxy: {
      '/api': {
